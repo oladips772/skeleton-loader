@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #414247; */
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card{
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 30px;
+}
+.card .header{
+    display: flex;
+    align-items: center;
+}
+.card .header .img{
+    height: 70px;
+    width: 70px;
+    background: gray;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .details{
+    margin-left: 20px;
+}
+
+ .details span{
+   background: gray;
+   display: block ;
+   border-radius: 10px;
+   position: relative;
+   overflow: hidden;
+}
+
+.details .name{
+    width: 100px;
+   height: 15px;
+}
+
+.details .about{
+    width: 150px;
+    height: 13px;
+    margin-top: 10px;
+}
+
+.card .content{
+    margin: 25px 0;
+}
+
+.content .line{
+    background: gray;
+    height: 13px;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .line-1{
+    width: calc(100% - 18%);  
+}
+
+.content .line-3{
+    width: calc(100% - 40%);  
+}
+.card .btns{
+    display: flex;
+}
+.card .btns .btn{
+    height: 45px;
+    width: 100%;
+    background: gray;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btns .btn-1{
+    margin-right:5px;
+}
+.btns .btn-2{
+    margin-left: 8px;
+}
+
+.card .header .img::before,
+.details span::before,
+.content .line::before, 
+.btns .btn::before{
+    content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(182, 179, 179) 0%, rgba(0,0,0,0.05) 20%, rgb(230, 221, 221) 40%, grey 100% );
+  background-size: 450px 400px;
+  background-repeat: no-repeat;
+  animation: shimer 1s linear infinite;
+}
+.details span::before,.btns .btn-2::before{
+    animation-delay: 2s;
+}
+@keyframes shimer {
+    0%{
+        background-position: -450px 0;
+    }
+       100%{
+            background-position: 450px 0;
+        }
+}
+
+
+
+
+
+
+
